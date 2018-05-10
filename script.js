@@ -37,7 +37,7 @@ driversLicence5(true);
 // ES6
 function driversLicence6(passedTest) {
 
-    console.log(firstName);
+    // console.log(firstName);
     let firstName;
     const yearOfBirth = 1990;    
 
@@ -49,3 +49,14 @@ function driversLicence6(passedTest) {
 }
 
 driversLicence6(true);
+
+
+
+// Try change with VAR
+let i = 23;
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+console.log(i);
