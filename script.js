@@ -1,22 +1,16 @@
-// Block and IIFEs
+// STRING
 
-// ES5
-(function() {
-    var c = 3;
-})();
+let firstName = 'John';
+let lastName = 'Smith';
+const yearOfBirth = 1990;
 
-// console.log(c);
-
-
-
-
-
-// ES6
-{
-    const a =1;
-    let b = 2;
-    var c =3
+function calcAge(year) {
+    return 2016 - year;
 }
 
-// console.log(a+b);
-console.log(c);
+
+// ES5
+console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + yearOfBirth + '. Today, he is ' + calcAge(yearOfBirth) + ' years old.');
+
+// ES6
+console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calcAge(yearOfBirth)} years old.`);
