@@ -35,9 +35,11 @@ driversLicence5(true);
 
 // ES6
 function driversLicence6(passedTest) {
+    let firstName;
+    const yearOfBirth = 1990;    
+
     if (passedTest) {
-        let firstName = 'John';
-        const yearOfBirth = 1990;
+        firstName = 'John';
     }
 
     console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car.');
