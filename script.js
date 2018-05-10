@@ -1,62 +1,22 @@
-// LET and CONST
+// Block and IIFEs
 
-/*
 // ES5
-var name5 = 'Yudha Yuki';
-var age = 23;
-name5 = 'Yudha Miller';
+(function() {
+    var c = 3;
+})();
 
-console.log(name5);
+// console.log(c);
+
+
+
 
 
 // ES6
-const name6 = 'Yudha Yuki';
-let age6 = 23;
-name6 = 'Yudha Miller';
-
-console.log(name6);
-*/
-
-
-// FUNCTION
-
-// ES5
-function driversLicence5(passedTest) {
-    if (passedTest) {
-        console.log(firstName);
-        var firstName = 'John';
-        var yearOfBirth = 1990;
-    }
-
-    console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car.');
+{
+    const a =1;
+    let b = 2;
+    var c =3
 }
 
-driversLicence5(true);
-
-
-// ES6
-function driversLicence6(passedTest) {
-
-    // console.log(firstName);
-    let firstName;
-    const yearOfBirth = 1990;    
-
-    if (passedTest) {
-        firstName = 'John';
-    }
-
-    console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car.');
-}
-
-driversLicence6(true);
-
-
-
-// Try change with VAR
-let i = 23;
-
-for (let i = 0; i < 5; i++) {
-    console.log(i);
-}
-
-console.log(i);
+// console.log(a+b);
+console.log(c);
