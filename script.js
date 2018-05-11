@@ -41,3 +41,9 @@ const john6 = new Person6('John', 1990, 'teacher');
 
 Person6.greeting();
 
+// NOTE:
+    /*
+    -   Class definition are not hoisted, we neeed to implement the class, and only later in our code we can start using it
+    -   We can only add METHODS to classes, but not properties
+
+
