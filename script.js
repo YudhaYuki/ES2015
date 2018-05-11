@@ -66,4 +66,19 @@ const box6 = {
         }
     }
 
-box6.clickMe();
+// box6.clickMe();
+
+
+
+// ES6 (SHARE lexical surrounding), Another scenario, I will be error because it will point to GLOBAL WINDOWS
+const box66 = {
+    color: 'green',
+    position: 1,
+    clickMe: () => {
+        document.querySelector('.green').addEventListener('click', () => {
+            let str = `This is box number ${this.position} and it is ${self.color}`;
+            alert(str)});
+        }
+    }
+
+box66.clickMe();
