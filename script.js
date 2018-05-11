@@ -1,31 +1,17 @@
-// STRING
+// ARROW FUNCTION
 
-let firstName = 'John';
-let lastName = 'Smith';
-const yearOfBirth = 1990;
-
-function calcAge(year) {
-    return 2016 - year;
-}
-
+const years = [1990, 1965, 1982, 1937];
 
 // ES5
-console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + yearOfBirth + '. Today, he is ' + calcAge(yearOfBirth) + ' years old.');
+var ages5 = years.map(function(year){
+    return 2016 - year;
+});
+
+console.log(ages5);
+
+
 
 // ES6
-console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calcAge(yearOfBirth)} years old.`);
+var ages6 = years.map(year => 2016 - year);
 
-
-
-
-
-
-
-const n = `${firstName} ${lastName}`;
-
-console.log(n.startsWith('J'));
-console.log(n.endsWith('h'));
-console.log(n.includes('oh'));
-console.log(`${firstName} `.repeat(5));
-
-
+console.log(ages6);
