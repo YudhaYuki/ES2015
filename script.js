@@ -55,7 +55,7 @@ for (const cur of boxesArr6) {
 
 
 // ES6 - ARRAY - LOOP - SHORTEN
-
+/*
 for (const cur of boxesArr6) {
     
     if (cur.className.includes('blue')) {
@@ -65,3 +65,32 @@ for (const cur of boxesArr6) {
     cur.textContent = 'I changed to blue !';
 
 }
+*/
+
+
+
+
+
+
+
+// ES5
+var ages = [12, 17, 8, 21, 14, 11];
+
+var full = ages.map(function(cur) {
+    return cur >= 18;
+});
+
+// Rturn only boolean
+console.log(full);
+
+// Find out position of fullAge in the index
+console.log(full.indexOf(true));
+
+// Find out value of the index
+console.log(ages[full.indexOf(true)]);
+
+
+
+// ES6
+console.log(ages.findIndex(cur => cur >= 18));
+console.log(ages.find(cur => cur >= 18));
