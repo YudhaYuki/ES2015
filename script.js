@@ -71,6 +71,7 @@ const box6 = {
 
 
 // ES6 (SHARE lexical surrounding), Another scenario, I will be error because it will point to GLOBAL WINDOWS
+/*
 const box66 = {
     color: 'green',
     position: 1,
@@ -82,3 +83,43 @@ const box66 = {
     }
 
 box66.clickMe();
+*/
+
+
+////////////////////////// Another EXAMPLE
+
+function Person(name) {
+    this.name = name;
+}
+
+
+// ES5, we need to add BIND method in order to point THIS in the function to Person not GLOBAL WINDOS
+Person.prototype.myFriends5 = function(friends) {
+
+    var arr = friends.map(function(el) {
+        return this.name + ' is friends with ' + el;
+    }.bind(this));
+
+    console.log(arr);
+}
+
+var friends = ['Bob', 'Jane', 'Mark'];
+
+new Person('John').myFriends5(friends);
+
+
+
+// ES6
+Person.prototype.myFriends6 = function(friends) {
+    
+    var arr = friends.map(el => `${this.name} is friends with ${el}`);
+
+    console.log(arr);
+};
+
+new Person('Mike').myFriends6(friends);
+    
+    
+    
+
+
