@@ -19,3 +19,15 @@ console.log(sum2);
 const sum3 = addFourAges(...ages);
 
 console.log(sum3);
+
+
+// ES6 Another example for SPREAD Operator - combine Array
+const familySmith = ['John', 'Jane', 'Mark'];
+const familyMiller = ['Mary', 'Bob', 'Ann'];
+const bigFamily = [...familySmith, 'Lily', ...familyMiller];
+
+console.log(bigFamily);
+
+
+
+// Combine nodeList
