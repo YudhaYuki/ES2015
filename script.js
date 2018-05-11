@@ -11,7 +11,16 @@ console.log(ages5);
 
 
 
-// ES6
-var ages6 = years.map(year => 2016 - year);
+// ES6 with ONE ARGUMENT
+/*
+const ages6 = years.map(year => 2016 - year);
 
 console.log(ages6);
+*/
+
+
+// ES6 with TWO ARGUMENTS
+let ages6 = years.map((el, index) => `Age element ${index + 1}: ${2016 - el}.`);
+
+console.log(ages6);
+
