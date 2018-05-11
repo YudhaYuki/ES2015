@@ -1,33 +1,23 @@
-// Spread Operator
+// Rest Parameter
 
-function addFourAges(a, b, c, d) {
-    return a + b + c + d;
+// ES5
+function isFullAge5() {
+    // console.log(arguments);
+    var argsArr = Array.prototype.slice.call(arguments);
+
+    argsArr.forEach(function(cur) {
+        console.log((2016 - cur) >= 18);
+    })
 }
 
-var sum1 = addFourAges(18, 30, 12, 21);
-console.log(sum1);
-
-
-// ES5 ARRAY
-var ages = [18, 30, 12, 21];
-var sum2 = addFourAges.apply(null, ages);
-
-console.log(sum2);
-
-
-// ES6 ARRAY
-const sum3 = addFourAges(...ages);
-
-console.log(sum3);
-
-
-// ES6 Another example for SPREAD Operator - combine Array
-const familySmith = ['John', 'Jane', 'Mark'];
-const familyMiller = ['Mary', 'Bob', 'Ann'];
-const bigFamily = [...familySmith, 'Lily', ...familyMiller];
-
-console.log(bigFamily);
+// isFullAge5(1990, 1999, 1965);
+// isFullAge5(1990, 1999, 1965, 2016, 1987);
 
 
 
-// Combine nodeList
+// ES6
+function isFullAge6(...years) {
+    years.forEach(cur => console.log((2016 - cur) >= 18));
+}
+
+isFullAge6(1990, 1999, 1965, 2016, 1987);
