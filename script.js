@@ -1,31 +1,24 @@
-// Default parameters
+// Maps
 
-// ES5
-/*
-function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+const question = new Map();
 
-    lastName === undefined ? lastName = 'Smith' : lastName = lastName;
-    nationality === undefined ? nationality = 'American' : nationality = nationality;
+question.set('question', 'What is the major official name of the latest major JS version?');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+question.set(true, 'Correct Answer :D');
+question.set(false, 'Wrong, please try again !');
 
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.yearOfBirth = yearOfBirth;
-    this.nationality = nationality;
+console.log(question.get('question'));
+
+console.log(question.size);
+
+if(question.has(4)) {
+    //question.delete(4);  
+    console.log('Answer 4 is here !');  
 }
 
-var john = new SmithPerson('John', 1990);
-var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
-*/
+// question.clear();
 
-
-// ES6
-function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'American') {
-    
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.yearOfBirth = yearOfBirth;
-        this.nationality = nationality;
-    }
-    
-    var john = new SmithPerson('John', 1990);
-    var emily = new SmithPerson('Emily', 1983, 'Diaz', 'Spanish');
