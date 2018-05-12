@@ -109,8 +109,18 @@ function reportParks(p) {
 }
 
 
-function reportStreets(p) {
+function reportStreets(s) {
 
+    console.log(`------------------------ PARKS REPORT ------------------------`)
+    
+    // Total and average length of the town's streets
+    const [totalLength, avgLength] = calc(s.map(el => el.length));
+
+    console.log(`Our ${s.length} streets have a total length of ${totalLength} km, with an average of ${avgLength} km.`);
+
+
+    // Size classification of all streets: tiny/small/normal/big/huge. If the size is unknown, the default is normal
+    s.forEach(el => el.classifyStreet());
 }
 
 reportParks(allParks);
